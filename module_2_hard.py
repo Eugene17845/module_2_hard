@@ -1,12 +1,14 @@
 def gen_pass(k):
     g = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     passw = ''
-    for a in g:
-        for b in g:
+    for a in g[0:]:
+        for b in g[1:]:
+            if a >= b:
+                continue
             ps = a + b
 
             if k % ps == 0 :
-                passw += str(a) + str(b)
+                 passw += str(a) + str(b)
 
 
     return passw
